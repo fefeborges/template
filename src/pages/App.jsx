@@ -68,7 +68,7 @@ function App() {
 
     return (
         <>
-            <Container sx={{ display: "flex", gap: "2rem", flexWrap: "wrap" }} >
+            <Container sx={{ display: "flex", gap: "2rem", flexWrap: "wrap", mt: 10 }} >
                 { erro && ( <span>{erro}</span>)}
                 { produtos && (
                     produtos.map( (produto, index ) => (
@@ -77,12 +77,17 @@ function App() {
                             key={index}
                             titulo={produto.titulo}
                             imagem={produto.imagem}
+                            categoria={produto.categoria}
                             descricao={produto.descricao}
+                            preco={produto.ano}
                             excluir={ (e) => Excluir( e, produto._id ) }
                         />
                     ) )
                 )}
-                
+
+
+
+
             </Container>
         </>
         

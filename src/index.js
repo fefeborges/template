@@ -9,28 +9,37 @@ import ErroPage from './pages/ErroPage';
 import App from './pages/App';
 import CadastroProduto from './pages/CadastroProduto';
 import "./App.css";
+import { CssBaseline } from '@mui/material';
 
 const theme = createTheme({
   palette: {
     mode: 'light',
     primary: {
-      main: '#7f3034',
-      light: '#d68f92',
-      contrastText: '#ffffff',
+      main: '#f798cc',
+      light: '#e6d3d3',
+      dark: '#aa2269',
+      contrastText: 'rgba(230,227,227,0.87)',
     },
     secondary: {
-      main: '#921d38',
-      dark: '#000000',
+      main: '#981b54',
+      dark: '#a63968',
+      light: '#cb5f7f',
     },
     text: {
-      primary: '#6d6666',
-      secondary: '#b12f2f',
+      primary: '#412e2e',
+      secondary: '#d0046f',
       hint: '#000000',
     },
     error: {
       main: '#d32f2f',
-      light: '#a85959',
     },
+  },
+  typography: {
+    fontFamily: 'Droid Serif',
+    fontWeightLight: 200,
+    fontWeightRegular: 400,
+    fontWeightMedium: 600,
+    fontWeightBold: 800,
   },
 });
 
@@ -68,6 +77,7 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <ThemeProvider theme={theme}>
+    <CssBaseline />
     <RouterProvider router={router} />
   </ThemeProvider>
 );
